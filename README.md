@@ -11,5 +11,12 @@ scoop install netbeagle/netbeagle
 This installs the standalone `netbeagle.exe` from the GitHub release. Update with
 `scoop update netbeagle`. Run it from an administrator terminal to see other users' command lines too.
 
+For completion (commands, options, and for `who` and `kill` the ports listening now), add this line to
+your PowerShell profile (`notepad $PROFILE`):
+
+```powershell
+netbeagle completion powershell | Out-String | Invoke-Expression
+```
+
 `bucket/netbeagle.json` is generated for each release by `scripts/packages.ts` in the netbeagle
 repository, from the release's `SHA256SUMS`.
